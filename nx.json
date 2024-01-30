@@ -48,20 +48,33 @@
     "sharedGlobals": []
   },
   "nxCloudAccessToken": "YjI2ZGViODMtODA2OS00NzlhLTkwMjYtMjlkNDQ1OGY1ZjU4fHJlYWQtd3JpdGU=",
+  "release": {
+    "version": {
+      "conventionalCommits": true
+    }
+  },
   "generators": {
     "@nx/react": {
       "application": {
         "style": "css",
         "linter": "eslint",
         "bundler": "webpack",
-        "babel": true
+        "babel": false        
       },
       "component": {
-        "style": "css"
+        "style": "css",
+        "js": true,
+        "routing": true
       },
       "library": {
         "style": "css",
         "linter": "eslint"
+      }
+    },
+    "@nx/nest": {
+      "library": {
+        "buildable": true,
+        "strict": true
       }
     }
   }
