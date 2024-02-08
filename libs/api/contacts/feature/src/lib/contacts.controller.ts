@@ -24,7 +24,7 @@ export class ContactsController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, updateContactDto: UpdateContactDto): Promise<Contact> {
+  update(@Param('id') id: string, @Body() updateContactDto: UpdateContactDto): Promise<Contact> {
     return this.contactsService.update(id, updateContactDto);
   }
 
