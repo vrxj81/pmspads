@@ -1,0 +1,30 @@
+{
+  "name": "api-domain-dtos",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/api/domain/dtos/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:swc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/api/domain/dtos",
+        "main": "libs/api/domain/dtos/src/index.ts",
+        "tsConfig": "libs/api/domain/dtos/tsconfig.lib.json",
+        "assets": ["libs/api/domain/dtos/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/api/domain/dtos/jest.config.ts"
+      }
+    }
+  },
+  "tags": ["scope:api", "type:domain"]
+}

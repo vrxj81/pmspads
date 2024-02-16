@@ -51,7 +51,8 @@
   "release": {
     "version": {
       "conventionalCommits": true
-    }
+    },
+    "projectsRelationship": "independent"
   },
   "generators": {
     "@nx/react": {
